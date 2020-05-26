@@ -1,11 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿//-------------------------------------------------------------------------------------------------
+//
+// PracticeClass.cs -- The PracticeClass class.
+//
+// Copyright (c) 2020. All rights reserved.
+//
+//-------------------------------------------------------------------------------------------------
+
+using System;
 
 namespace TestConsole
 {
+    //----------------------------------------------------------------------------------------------
+    /// <summary>
+    /// Class for writing the methods
+    /// </summary>
     public static class PracticeClass
     {
+        #region Methods
+        
         //-----------------------------------------------------------------------------------------
         /// <summary>
         /// Convert Digit To Words
@@ -148,7 +160,6 @@ namespace TestConsole
             return wordResult;
         }
 
-
         //-----------------------------------------------------------------------------------------
         /// <summary>
         /// Spell The Number
@@ -188,8 +199,10 @@ namespace TestConsole
                 resultValue = number % 100;
                 returnResult = returnResult + " " + ConvertDigitToWords(resultValue);
             }
-            returnResult = returnResult + ' ' + " Rupees only";
+            returnResult = returnResult + ' ' + "Only.";
             return returnResult;
         }
+
+        #endregion
     }
 }

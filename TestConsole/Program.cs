@@ -22,10 +22,26 @@ namespace TestConsole
         /// </summary>
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                // Type a numeric argument
+                Console.WriteLine("Please enter a numeric argument:");
 
-            PracticeClass.SpellTheNumber(111);
+                // Create a variable and get user input from the keyboard and store it in the variable
+                long inputValue = long.Parse(Console.ReadLine());
+
+                Console.WriteLine("Indian number system...");
+                Console.WriteLine(PracticeClass.SpellTheNumber(inputValue));
+
+                Console.WriteLine("International number system...");
+                Console.WriteLine(InternationalFormat.NumberToWords(inputValue));
+                Console.ReadKey();
+                Environment.Exit(0);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-        
     }
 }
